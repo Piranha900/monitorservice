@@ -1,0 +1,16 @@
+[Unit]
+Description=Start the script
+
+[Service]
+Type=oneshot
+ExecStart=/path/to/your/script
+
+
+[Unit]
+Description= Triggers the service
+
+[Path]
+DirectoryNotEmpty=/path/to/monitor
+
+[Install]
+WantedBy=multi-user.target
